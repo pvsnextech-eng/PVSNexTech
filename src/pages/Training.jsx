@@ -96,7 +96,7 @@ export default function Training() {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/training-enquiry", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || ""}/api/training-enquiry`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
