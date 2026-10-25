@@ -21,7 +21,7 @@ export default function SectionHeading({
       initial={{ opacity: 0, y: 30 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`mb-14 ${center ? "text-center" : ""} ${className}`}
+      className={`mb-8 md:mb-14 ${center ? "text-center" : ""} ${className}`}
     >
       {subtitle && (
         <span

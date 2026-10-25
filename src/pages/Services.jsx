@@ -58,7 +58,7 @@ function ServiceSection({ service, index }) {
             className="lg:w-5/12"
           >
             <div
-              className={`relative rounded-3xl p-12 bg-gradient-to-br ${serviceAccentBg[service.id]} overflow-hidden`}
+              className={`relative rounded-3xl p-8 sm:p-12 bg-gradient-to-br ${serviceAccentBg[service.id]} overflow-hidden`}
             >
               {/* Decorative circles */}
               <div

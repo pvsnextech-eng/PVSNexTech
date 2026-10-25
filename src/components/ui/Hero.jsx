@@ -54,8 +54,8 @@ export default function Hero({
     <section
       className={`relative w-full overflow-hidden text-white flex items-center border-b border-white/10 ${
         isHome
-          ? "min-h-[75vh] md:min-h-[82vh] pt-28 pb-16 md:pt-36 md:pb-20"
-          : "min-h-[46vh] md:min-h-[52vh] pt-28 pb-14 md:pt-34 md:pb-16"
+          ? "min-h-[60vh] md:min-h-[75vh] lg:min-h-[82vh] pt-24 pb-12 md:pt-28 md:pb-16 lg:pt-36 lg:pb-20"
+          : "min-h-[50vh] md:min-h-[46vh] lg:min-h-[52vh] pt-24 pb-10 md:pt-28 md:pb-14 lg:pt-34 lg:pb-16"
       }`}
       style={{
         background: "linear-gradient(135deg, #051838 0%, #08244E 38%, #0C366E 70%, #061F47 100%)",

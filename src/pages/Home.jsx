@@ -39,7 +39,7 @@ function Letter3D({ char, color1, color2, className = "" }) {
     >
       {/* Shadow layer */}
       <span
-        className="absolute inset-0 text-[10rem] md:text-[14rem] lg:text-[18rem] font-black leading-none"
+        className="absolute inset-0 text-[5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-black leading-none"
         style={{
           color: "transparent",
           WebkitTextStroke: `3px ${color2}20`,
@@ -50,7 +50,7 @@ function Letter3D({ char, color1, color2, className = "" }) {
       </span>
       {/* Main letter */}
       <span
-        className="relative text-[10rem] md:text-[14rem] lg:text-[18rem] font-black leading-none"
+        className="relative text-[5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-black leading-none"
         style={{
           background: `linear-gradient(135deg, ${color1}, ${color2})`,
           WebkitBackgroundClip: "text",
@@ -182,8 +182,8 @@ export default function Home() {
           ))}
         </div>
         <div className="container-max relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
-            <div className="flex-shrink-0">
+          <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-20">
+            <div className="flex-shrink-0 overflow-hidden">
               <Letter3D char="P" color1="#00A1E0" color2="#33B4E6" />
             </div>
             <div className="flex-1 text-center lg:text-left">
@@ -196,7 +196,7 @@ export default function Home() {
                 P — Progress
               </motion.span>
               <motion.h2
-                className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -235,8 +235,8 @@ export default function Home() {
       <section className="relative overflow-hidden bg-white section-padding">
         <ParticleDots color="#FF7900" count={18} />
         <div className="container-max relative z-10">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-20">
-            <div className="flex-shrink-0">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-20">
+            <div className="flex-shrink-0 overflow-hidden">
               <Letter3D char="V" color1="#FF7900" color2="#FF9633" />
             </div>
             <div className="flex-1 text-center lg:text-left">
@@ -244,7 +244,7 @@ export default function Home() {
                 V — Veeva
               </span>
               <motion.h2
-                className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -324,8 +324,8 @@ export default function Home() {
           ))}
         </div>
         <div className="container-max relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
-            <div className="flex-shrink-0">
+          <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-20">
+            <div className="flex-shrink-0 overflow-hidden">
               <Letter3D char="S" color1="#00A1E0" color2="#0081B3" />
             </div>
             <div className="flex-1 text-center lg:text-left">
@@ -333,7 +333,7 @@ export default function Home() {
                 S — Salesforce
               </span>
               <motion.h2
-                className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

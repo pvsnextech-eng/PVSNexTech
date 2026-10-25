@@ -98,7 +98,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="bg-gradient-navy rounded-2xl p-10 text-white">
+              <div className="bg-gradient-navy rounded-2xl p-6 sm:p-10 text-white">
                 <Building2 className="w-12 h-12 text-sf-blue mb-6" />
                 <h3 className="text-2xl font-bold mb-4">IT Services & Consulting</h3>
                 <ul className="space-y-3 text-gray-300">
@@ -121,7 +121,7 @@ export default function About() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-10 shadow-md border-t-4 border-sf-blue"
+              className="bg-white rounded-2xl p-6 sm:p-10 shadow-md border-t-4 border-sf-blue"
             >
               <span className="inline-block text-sf-blue text-sm font-semibold uppercase tracking-widest mb-3">
                 Our Mission
@@ -138,7 +138,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-white rounded-2xl p-10 shadow-md border-t-4 border-orange"
+              className="bg-white rounded-2xl p-6 sm:p-10 shadow-md border-t-4 border-orange"
             >
               <span className="inline-block text-orange text-sm font-semibold uppercase tracking-widest mb-3">
                 Our Vision

@@ -128,12 +128,10 @@
 
   /* Section padding standard */
   .section-padding {
-    @apply py-20 px-4 md:py-28 md:px-8 lg:px-16;
+    @apply py-12 px-4 md:py-20 md:px-8 lg:py-28 lg:px-16;
   }
 
   .container-max {
     @apply max-w-7xl mx-auto;
   }
 }
-
-*/

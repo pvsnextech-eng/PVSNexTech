@@ -310,7 +310,7 @@ export default function Training() {
             <h3 className="text-2xl md:text-3xl font-extrabold mb-8">
               Why Choose PVS NexTech Training?
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
               {whyChooseUs.map((item) => (
                 <div key={item} className="p-4 rounded-xl bg-white/5 border border-white/10 flex flex-col items-center justify-center">
                   <CheckCircle2 className="w-6 h-6 text-orange mb-2" />
@@ -331,7 +331,7 @@ export default function Training() {
             description="Take the next step in your career. Submit your details and our training coordinator will reach out."
           />
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100">
+          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-5 sm:p-8 md:p-10 shadow-lg border border-gray-100">
             {/* Honeypot */}
             <div className="hidden" aria-hidden="true">
               <input
@@ -533,7 +533,7 @@ export default function Training() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white rounded-2xl max-w-2xl w-full p-8 max-h-[85vh] overflow-y-auto shadow-2xl"
+              className="bg-white rounded-2xl max-w-2xl w-full p-5 sm:p-8 max-h-[85vh] overflow-y-auto shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-start justify-between border-b pb-4 mb-6">
