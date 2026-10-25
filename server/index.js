@@ -18,9 +18,16 @@ const pool = process.env.DATABASE_URL
   : null;
 
 if (pool) {
-  pool.connect()
+  // Lightweight connectivity check — releases immediately so Neon doesn't
+  // timeout an idle held connection and crash the server.
+  pool.query('SELECT 1')
     .then(() => console.log("[DB] Connected to Neon PostgreSQL ✅"))
     .catch((err) => console.error("[DB] Connection error:", err.message));
+
+  // Prevent stale idle-client disconnect from crashing the process.
+  pool.on('error', (err) => {
+    console.error('[DB] Unexpected idle client error (non-fatal):', err.message);
+  });
 } else {
   console.warn("[DB] DATABASE_URL not set — database saving disabled.");
 }
