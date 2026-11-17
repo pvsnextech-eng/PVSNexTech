@@ -38,7 +38,7 @@ const PORT = process.env.PORT || 3001;
 // Security Middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.CLIENT_ORIGIN || "http://localhost:5173",
+  origin: process.env.CLIENT_ORIGIN || ["http://localhost:5173", "https://pvsnextech.netlify.app"],
   methods: ["POST", "GET"],
 }));
 app.use(express.json({ limit: "50kb" }));

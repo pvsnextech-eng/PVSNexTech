@@ -54,8 +54,8 @@ export default function Hero({
     <section
       className={`relative w-full overflow-hidden text-white flex items-center border-b border-white/10 ${
         isHome
-          ? "min-h-[60vh] md:min-h-[75vh] lg:min-h-[82vh] pt-24 pb-12 md:pt-28 md:pb-16 lg:pt-36 lg:pb-20"
-          : "min-h-[50vh] md:min-h-[46vh] lg:min-h-[52vh] pt-24 pb-10 md:pt-28 md:pb-14 lg:pt-34 lg:pb-16"
+          ? "min-h-[60vh] md:min-h-[75vh] lg:min-h-[82vh] pt-24 pb-12 sm:pt-28 md:pt-32 lg:pt-36 lg:pb-20"
+          : "min-h-[50vh] md:min-h-[46vh] lg:min-h-[52vh] pt-24 pb-10 sm:pt-28 md:pt-32 lg:pt-34 lg:pb-16"
       }`}
       style={{
         background: "linear-gradient(135deg, #051838 0%, #08244E 38%, #0C366E 70%, #061F47 100%)",
@@ -78,7 +78,12 @@ export default function Hero({
         />
 
         {/* Dynamic Curved Energy Beams & Swirling Arcs */}
-        <svg className="absolute inset-0 w-full h-full opacity-40" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          viewBox="0 0 1920 600"
+          preserveAspectRatio="none"
+          className="absolute inset-0 w-full h-full opacity-40 overflow-hidden pointer-events-none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <defs>
             <linearGradient id="beam-blue" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#00C2FF" stopOpacity="0" />

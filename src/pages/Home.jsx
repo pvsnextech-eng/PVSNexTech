@@ -31,15 +31,15 @@ import siteConfig from "../config/siteConfig";
 function Letter3D({ char, color1, color2, className = "" }) {
   return (
     <motion.div
-      className={`relative select-none ${className}`}
+      className={`relative select-none max-w-full ${className}`}
       initial={{ scale: 0.7, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-20px" }}
       transition={{ duration: 0.8, type: "spring", stiffness: 80 }}
     >
       {/* Shadow layer */}
       <span
-        className="absolute inset-0 text-[5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-black leading-none"
+        className="absolute inset-0 text-[4.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-black leading-none"
         style={{
           color: "transparent",
           WebkitTextStroke: `3px ${color2}20`,
@@ -50,7 +50,7 @@ function Letter3D({ char, color1, color2, className = "" }) {
       </span>
       {/* Main letter */}
       <span
-        className="relative text-[5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-black leading-none"
+        className="relative text-[4.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] font-black leading-none"
         style={{
           background: `linear-gradient(135deg, ${color1}, ${color2})`,
           WebkitBackgroundClip: "text",

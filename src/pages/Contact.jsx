@@ -85,7 +85,13 @@ export default function Contact() {
         }),
       });
 
-      const resData = await response.json();
+      let resData = {};
+      try {
+        resData = await response.json();
+      } catch (parseErr) {
+        resData = { success: false, message: "Unexpected response from server. Please try again." };
+      }
+
       if (response.ok && resData.success) {
         toast.success("Thank you! Your message has been sent. We'll be in touch soon.");
         setFormData({

@@ -64,7 +64,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-2 shadow-xl" : "py-4"
+        scrolled ? "py-2 shadow-xl" : "py-3 md:py-4"
       }`}
       style={{ background: "rgba(6, 29, 63, 0.97)", backdropFilter: "blur(12px)" }}
     >
@@ -153,7 +153,7 @@ export default function Header() {
           <img
             src="/assets/pvs-nextech-logo.png"
             alt="PVS NexTech Logo"
-            className={`transition-all duration-300 w-auto object-contain ${scrolled ? "h-14 md:h-16" : "h-16 md:h-20"}`}
+            className={`transition-all duration-300 w-auto object-contain ${scrolled ? "h-11 sm:h-14 md:h-16" : "h-12 sm:h-16 md:h-20"}`}
             loading="eager"
           />
         </Link>
@@ -177,10 +177,25 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed top-0 left-0 bottom-0 w-72 bg-navy-dark z-50 flex flex-col p-6 pt-20 overflow-y-auto lg:hidden"
+              className="fixed top-0 left-0 bottom-0 w-72 max-w-[85vw] bg-navy-dark z-50 flex flex-col p-5 overflow-y-auto lg:hidden shadow-2xl"
               role="navigation"
               aria-label="Mobile navigation"
             >
+              {/* Drawer Header with Logo & Close Button */}
+              <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-2">
+                <img
+                  src="/assets/pvs-nextech-logo.png"
+                  alt="PVS NexTech"
+                  className="h-9 w-auto object-contain"
+                />
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors cursor-pointer"
+                  aria-label="Close menu"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
               {siteConfig.navLinks.map((link) =>
                 link.dropdown ? (
                   <div key={link.label} className="border-b border-white/10">

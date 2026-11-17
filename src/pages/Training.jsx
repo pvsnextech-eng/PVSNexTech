@@ -113,7 +113,13 @@ export default function Training() {
         }),
       });
 
-      const resData = await response.json();
+      let resData = {};
+      try {
+        resData = await response.json();
+      } catch (parseErr) {
+        resData = { success: false, message: "Unexpected response from server. Please try again." };
+      }
+
       if (response.ok && resData.success) {
         toast.success("Enquiry submitted successfully! We will get in touch with details.");
         setFormData({

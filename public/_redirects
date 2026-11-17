@@ -1,0 +1,4 @@
+/api/contact          /.netlify/functions/contact          200
+/api/training-enquiry /.netlify/functions/training-enquiry 200
+/api/health           /.netlify/functions/health           200
+/*                    /index.html                          200
