@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 import siteConfig from "../config/siteConfig";
 
@@ -10,7 +11,16 @@ import siteConfig from "../config/siteConfig";
 export default function Footer() {
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showTerms, setShowTerms] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const currentYear = new Date().getFullYear();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const socialIcons = {
     linkedin: (
@@ -154,13 +164,20 @@ export default function Footer() {
         </div>
 
         {/* Back to Top */}
-        <button
-          onClick={scrollToTop}
-          aria-label="Back to top"
-          className="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-sf-blue text-white shadow-lg flex items-center justify-center hover:bg-sf-blue-dark transition-all duration-200 z-40 cursor-pointer"
-        >
-          <ArrowUp className="w-5 h-5" />
-        </button>
+        <AnimatePresence>
+          {showBackToTop && (
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              onClick={scrollToTop}
+              aria-label="Back to top"
+              className="fixed bottom-4 right-4 md:bottom-6 md:right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-sf-blue text-white shadow-xl flex items-center justify-center hover:bg-sf-blue-dark transition-all duration-200 z-30 cursor-pointer"
+            >
+              <ArrowUp className="w-4 h-4 md:w-5 md:h-5" />
+            </motion.button>
+          )}
+        </AnimatePresence>
       </footer>
 
       {/* Privacy Policy Modal */}
