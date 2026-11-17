@@ -24,7 +24,7 @@ const siteConfig = {
   phone: "+91 63025 31386",
   email: "pvsnextech@gmail.com",
   workingHours: "Mon – Fri: 9:00 AM – 6:00 PM",
-  trainingHours: "Sat – Sun: 5 – 6 Hours / Day",
+  trainingHours: "Sat – Sun: 2 – 3 Hours / Day",
 
   /* ── Google Maps ─────────────────────────────────────────── */
   // Embed URL generated from verified office address (Badvel, Kadapa, AP)
@@ -34,7 +34,7 @@ const siteConfig = {
 
   /* ── Social Links ────────────────────────────────────────── */
   socialLinks: {
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/pvs-nextech-788518443",
     youtube: "https://youtube.com/@pvsnextech?si=rledzOPPHCNq86Ga",
     x: "https://x.com/PVSNexTech",
     instagram: "https://www.instagram.com/pvs_nextech",
