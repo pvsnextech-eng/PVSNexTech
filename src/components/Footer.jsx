@@ -66,11 +66,13 @@ export default function Footer() {
               {siteConfig.shortIntro}
             </p>
             <div className="flex items-center gap-3">
-              {Object.entries(siteConfig.socialLinks).map(([key, url]) => (
+              {Object.entries(siteConfig.socialLinks)
+                .filter(([, url]) => url && url.trim() !== "" && !url.startsWith("["))
+                .map(([key, url]) => (
                 <a
                   key={key}
-                  href={url.startsWith("[") ? "#" : url}
-                  target={url.startsWith("[") ? undefined : "_blank"}
+                  href={url}
+                  target="_blank"
                   rel="noopener noreferrer"
                   aria-label={key}
                   className="w-10 h-10 rounded-lg flex items-center justify-center bg-white/5 hover:bg-sf-blue hover:text-white transition-all duration-200 text-gray-400"
@@ -119,7 +121,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold text-base mb-5">Contact</h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li>{siteConfig.address}</li>
+              <li>{siteConfig.addressFull}</li>
               <li>
                 <a
                   href={`tel:${siteConfig.phone}`}
@@ -137,6 +139,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>{siteConfig.workingHours}</li>
+              <li className="text-orange">{siteConfig.trainingHours}</li>
             </ul>
           </div>
         </div>

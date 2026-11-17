@@ -19,22 +19,25 @@ const siteConfig = {
     "PVS NexTech is an IT services and consulting company specializing in Salesforce, Veeva CRM, Veeva Vault, and Tableau solutions.",
 
   /* ── Contact Details ─────────────────────────────────────── */
-  address: "[Add verified address]",
-  phone: "[Add verified phone number]",
-  email: "[Add verified email address]",
-  workingHours: "Monday – Friday, 9:00 AM – 6:00 PM",
+  address: "Vidya Nagar, Badvel, Kadapa District, Andhra Pradesh",
+  addressFull: "Vidya Nagar, opposite Corporate School, Badvel Mandal, Kadapa District, Andhra Pradesh",
+  phone: "+91 63025 31386",
+  email: "pvsnextech@gmail.com",
+  workingHours: "Mon – Fri: 9:00 AM – 6:00 PM",
+  trainingHours: "Sat – Sun: 5 – 6 Hours / Day",
 
   /* ── Google Maps ─────────────────────────────────────────── */
-  // Paste a Google Maps embed URL here once available.
-  // Example: "https://www.google.com/maps/embed?pb=..."
-  mapEmbedUrl: "",
+  // Embed URL generated from verified office address (Badvel, Kadapa, AP)
+  mapEmbedUrl: "https://maps.google.com/maps?q=Vidya+Nagar,+Badvel,+Kadapa+District,+Andhra+Pradesh&output=embed&z=15",
+  // Direct link to share on "Get Directions" button
+  mapDirectLink: "https://maps.app.goo.gl/jgFuQGL9FxeuMETm7",
 
   /* ── Social Links ────────────────────────────────────────── */
   socialLinks: {
-    linkedin: "[Add LinkedIn URL]",
-    youtube: "[Add YouTube URL]",
-    x: "[Add X / Twitter URL]",
-    instagram: "[Add Instagram URL]",
+    linkedin: "",
+    youtube: "https://youtube.com/@pvsnextech?si=rledzOPPHCNq86Ga",
+    x: "https://x.com/PVSNexTech",
+    instagram: "https://www.instagram.com/pvs_nextech",
   },
 
   /* ── Navigation ──────────────────────────────────────────── */

@@ -140,7 +140,7 @@ export default function Contact() {
   const contactCards = [
     {
       label: "Office Location",
-      val: siteConfig.address,
+      val: siteConfig.addressFull,
       icon: <MapPin className="w-6 h-6 text-sf-blue" />,
     },
     {
@@ -157,7 +157,7 @@ export default function Contact() {
     },
     {
       label: "Working Hours",
-      val: siteConfig.workingHours,
+      val: `${siteConfig.workingHours} | Training: ${siteConfig.trainingHours}`,
       icon: <Clock className="w-6 h-6 text-orange" />,
     },
   ];
@@ -374,9 +374,13 @@ export default function Contact() {
             <div className="lg:col-span-5 space-y-6">
               <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                 <h4 className="text-lg font-bold text-navy mb-3">Office Location</h4>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  {siteConfig.address}
+                <p className="text-gray-600 text-sm mb-1 leading-relaxed">
+                  {siteConfig.addressFull}
                 </p>
+                <div className="flex flex-wrap gap-3 mb-4 text-xs text-gray-500">
+                  <span>📅 {siteConfig.workingHours}</span>
+                  <span className="text-orange font-medium">🎓 Training: {siteConfig.trainingHours}</span>
+                </div>
 
                 {siteConfig.mapEmbedUrl && siteConfig.mapEmbedUrl.trim() !== "" ? (
                   <div className="w-full h-72 rounded-xl overflow-hidden shadow-inner border border-gray-200">
@@ -399,6 +403,17 @@ export default function Contact() {
                       A live map will display here once verified office coordinates or embed link is added in siteConfig.
                     </span>
                   </div>
+                )}
+
+                {siteConfig.mapDirectLink && (
+                  <a
+                    href={siteConfig.mapDirectLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-sf-blue hover:underline"
+                  >
+                    <MapPin className="w-3.5 h-3.5" /> Get Directions on Google Maps
+                  </a>
                 )}
               </div>
 
